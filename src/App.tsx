@@ -63,8 +63,8 @@ export default function App(): JSX.Element {
                     return <div className="title" key={book}>{book}</div>
                 }
             })}
-            {loading && <div className="loading">Loading...</div>}
-            {error && <div>Error</div>}
+            {loading ? <div className="loading">Loading...</div> : null}
+            {error ? <div>Error</div> : null}
         </>
     )
 }
